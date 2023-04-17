@@ -1,0 +1,19 @@
+class Solution {
+    public int[] separateDigits(int[] nums) {
+        ArrayList<Integer> a=new ArrayList<Integer>();
+        int sum=0,rem=0;
+        for(int i=nums.length-1;i>=0;i--){
+            while(nums[i]!=0){
+              rem=nums[i]%10;
+              a.add(rem);
+              nums[i]/=10;
+            }
+        }
+        Collections.reverse(a);
+        int n[]=new int[a.size()];
+        for(int i=0;i<a.size();i++){
+            n[i]=a.get(i);
+        }
+        return n;
+    }
+}
