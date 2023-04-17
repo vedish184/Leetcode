@@ -1,0 +1,22 @@
+class Solution {
+    static List<List<Integer>> ans;
+    public void permu(int[] nums, List<Integer> list, boolean[] flag){
+        if(list.size()==nums.length){
+            ans.add(new ArrayList<>(list)); return;  
+        }   
+        for(int i=0;i<nums.length;i++){
+            if(!flag[i]){
+                flag[i] = true;
+                list.add(nums[i]);
+                permu(nums,list,flag);
+                flag[i] = false;
+                list.remove(list.size()-1);
+            }
+        }
+    }       
+    public List<List<Integer>> permute(int[] nums) {
+        ans = new ArrayList<>();
+        permu(nums, new ArrayList<>(),new boolean[nums.length+1]);
+        return ans;
+    }       
+}           
