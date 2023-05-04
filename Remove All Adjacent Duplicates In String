@@ -1,0 +1,22 @@
+class Solution {
+    public String removeDuplicates(String str) {
+        
+        Stack<Character> s= new Stack<>();
+
+        for( char c: str.toCharArray()){
+            if( s.isEmpty()==false && s.peek()==c){
+                s.pop();
+            }
+            else{
+                s.add( c);
+            }
+        }
+        StringBuilder ans= new StringBuilder();
+
+        while( s.isEmpty()==false){
+            ans.append( s.pop());
+        }
+        // reverse it as stack is first in last out
+        return ans.reverse().toString() ;
+           }
+}
