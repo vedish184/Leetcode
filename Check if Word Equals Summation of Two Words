@@ -1,0 +1,16 @@
+class Solution {
+    public boolean isSumEqual(String firstWord, String secondWord, String targetWord) {
+            int x=findNumeric(firstWord);
+    int y=findNumeric(secondWord);
+    int z=findNumeric(targetWord);
+    return (x+y)==z;
+    
+}
+int findNumeric(String str){
+    String s="";
+    for(int i=0;i<str.length();i++){
+        s+=str.charAt(i)-'a';
+    }
+    return Integer.valueOf(s);
+}
+    }
