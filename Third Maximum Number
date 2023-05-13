@@ -1,0 +1,13 @@
+class Solution {
+    public int thirdMax(int[] nums) {
+        Arrays.sort(nums);
+        HashSet<Integer> v = new HashSet<>();
+        
+        for(int i=nums.length-1;i>=0;i--){
+            v.add(nums[i]);
+            if(v.size()==3) return nums[i];
+
+        }
+        return nums[nums.length-1];
+    }
+}
