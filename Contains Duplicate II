@@ -6,7 +6,7 @@ class Solution {
         //         if(nums[i]==nums[j]){
         //             int sub=i-j;
         //             int n=Math.abs(sub);
-        //             if(n<=k){
+        //             if(n<=k){     
         //                 return true;
         //             }
         //         }
