@@ -4,7 +4,7 @@ class Solution {
         while(i<num){
             i+=Math.pow(2,j);
             j++;
-        }
+        }  
         return i-num;
     }
 }
