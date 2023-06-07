@@ -5,7 +5,7 @@ class Solution {
             if((i==0||s.charAt(i-1)==' ')&&s.charAt(i)!=' '){
                 n++;
             }
-        }
+        }  
         return n;
     }
 }
